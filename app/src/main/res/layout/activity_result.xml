@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E1E1"
+    tools:context=".Model.ResultActivity"
+    android:layoutDirection="ltr"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/font_color"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/shimmerProfile"
+        android:visibility="visible"
+        android:layout_marginTop="60dp"
+        android:layout_height="180dp">
+       <include layout="@layout/shimmer_profile"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmerList"
+
+        android:visibility="visible"
+        android:layout_marginTop="260dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/shimmer_list"/>
+            <include layout="@layout/shimmer_list"/>
+            <include layout="@layout/shimmer_list"/>
+            <include layout="@layout/shimmer_list"/>
+            <include layout="@layout/shimmer_list"/>
+            <include layout="@layout/shimmer_list"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:id="@+id/profileView"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/avatar2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/graduate"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="16dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/avatar2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:id="@+id/studentIdTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_gravity="center_vertical|end"
+                    android:fontFamily="@font/yekan_regular"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fullNameMainTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/yekan_regular"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/degreeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/yekan_regular"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        android:id="@+id/mainListView"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:listitem="@layout/list"
+            android:id="@+id/rvMain"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/emptyState404"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/img404"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/error_404" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="امتحانی با این شماره دانشجویی یافت نشد"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:text="دوباره تلاش کنید"
+            android:textColor="@color/font_color"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="80dp"
+            android:id="@+id/btnRetry404"
+            />
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emptyStateNoInternet"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/no_internet"
+            android:layout_gravity="center"
+            android:layout_marginBottom="75dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:fontFamily="@font/yekan_regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:text="لطفا اتصال اینترنت خود را بررسی کنید"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:fontFamily="@font/yekan_regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:text="یا اتصال خود به VPN را قطع کنید"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="دوباره امتحان کنید"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="@color/font_color"
+            android:layout_gravity="center"
+            android:layout_marginTop="125dp"
+            android:id="@+id/retryNoInternet"/>
+    </FrameLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

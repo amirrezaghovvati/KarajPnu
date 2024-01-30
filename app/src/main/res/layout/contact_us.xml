@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+
+    app:cardCornerRadius="-22dp"
+    android:layout_marginBottom="-12dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="انتقادات و پیشنهادات"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="واحد امتحانات"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/yekan_regular"
+
+            android:text="سایت گلستان"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="سایت دانشگاه"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvUrlEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="TextView"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvExamUrlDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUrlEmail"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="TextView"
+
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvUrlGolestan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExamUrlDepartment"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="TextView"
+            android:textColor="#0000FF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvUrlUni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUrlGolestan"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/yekan_regular"
+            android:text="TextView"
+            android:textColor="#0000FF"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/webPageLinkUni"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+
+            android:layout_below="@+id/tvUrlGolestan"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/tvUrlUni"
+            app:srcCompat="@drawable/webpage_link" />
+
+        <ImageView
+            android:id="@+id/webPageLinkGoles"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/tvExamUrlDepartment"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/tvUrlGolestan"
+            app:srcCompat="@drawable/webpage_link" />
+
+        <ImageView
+            android:id="@+id/callIc"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/tvUrlEmail"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/tvExamUrlDepartment"
+            app:srcCompat="@drawable/baseline_call_24" />
+
+        <ImageView
+            android:id="@+id/emailIc"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/tvUrlEmail"
+            app:srcCompat="@drawable/baseline_email_24" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

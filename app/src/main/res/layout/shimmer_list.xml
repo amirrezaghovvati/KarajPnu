@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="#FF9100"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <TextView
+            android:id="@+id/tvExamName"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/yekan_regular"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvExamType"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/yekan_regular"
+             android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvExamName"
+            app:layout_constraintStart_toEndOf="@+id/tvCourseId"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBuilding"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="36dp"
+
+            android:fontFamily="@font/yekan_regular"
+
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvExamName" />
+
+        <TextView
+            android:id="@+id/tvCourseId"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/yekan_regular"
+             android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/yekan_regular"
+             android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBuilding"
+            app:layout_constraintTop_toBottomOf="@+id/tvExamType" />
+
+        <TextView
+            android:id="@+id/tvSeatNo"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/yekan_regular"
+
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/tvCourseId" />
+
+        <TextView
+            android:id="@+id/tvHour"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/yekan_regular"
+
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBuilding" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_txt"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/yekan_regular"
+
+            android:textColor="@color/black"
+
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
